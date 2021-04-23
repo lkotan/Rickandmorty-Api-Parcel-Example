@@ -1,0 +1,97 @@
+@import "variables";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $dark-color;
+    color: $light-color;
+}
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+.alert {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    transition: all 0.5s;
+    opacity: 0;
+
+    h4 {
+        text-transform:capitalize;
+        letter-spacing: 1.2px;
+        background: $light-color;
+        padding: 15px 30px;
+        border-radius: 4px;
+        border-left: 2px solid $light-color;
+        opacity: 1;
+        color: $text-color;
+    }
+    span {
+        border-bottom: 1px solid $dark-color;
+    }
+}
+.form-control {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+
+    input {
+        outline: none;
+        border: 0;
+        border-bottom: 2px solid $light-color;
+        background: $dark-color;
+        color: $light-color;
+        width: 300px;
+    }
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-image {
+        position: relative;
+
+        img {
+            cursor: pointer;
+            margin: 10px;
+            border: 10px solid $light-color;
+            border-radius: 4px;
+        }
+        h1,
+        p {
+            color: $text-color;
+            width: 100%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            transition: all 0.5s;
+            opacity: 0;
+        }
+        h1 {
+            top: 5%;
+            left: 50%;
+            width: 65%;
+        }
+        p {
+            top: 95%;
+            left: 75%;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        &:hover > h1,
+        &:hover > p {
+            opacity: 1;
+        }
+        &:hover > h1 {
+            top: 27%;
+        }
+        &:hover > p {
+            top: 80%;
+        }
+    }
+}
